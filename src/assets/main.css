@@ -1,0 +1,104 @@
+:root {
+  font-family: sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: rgba(255, 255, 255, 0.87);
+  background-color: black;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --navbar-height: 3rem;
+  --status-height: 2rem;
+
+  --min-content-height: calc(100dvh - (var(--navbar-height) + var(--status-height)));
+
+  --content-width: 1280px;
+  --content-wrapper-left-padding: calc((100vw - (var(--content-width))) / 2);
+
+  --border-color: rgba(128, 128, 128, 0.185);
+}
+
+html {
+  min-width: 320px;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  min-width: 600px;
+}
+
+main {
+  width: 100%;
+  padding: 0.5rem 0;
+  padding-left: var(--content-wrapper-left-padding);
+  box-sizing: border-box;
+  /* min-height: var(--min-content-height); */
+  height: var(--min-content-height);
+  min-height: 500px;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+  line-height: normal;
+  cursor: pointer;
+}
+
+textarea {
+  resize: none;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@media screen and (max-width: 1350px) {
+  :root {
+    --content-width: 1024px;
+  }
+}
+@media screen and (max-width: 1060px) {
+  :root {
+    --content-width: calc(100% - 10px);
+    --content-wrapper-left-padding: 5px;
+  }
+}
+@media screen and (max-width: 650px) {
+  /* :root {
+  } */
+}
